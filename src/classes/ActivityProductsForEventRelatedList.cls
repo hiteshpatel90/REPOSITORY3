@@ -5,7 +5,7 @@ public with sharing class ActivityProductsForEventRelatedList{
     //added an instance varaible for the standard controller
     private ApexPages.StandardController controller {get; set;}
     public ActivityProductsForEventRelatedList(ApexPages.StandardController controller) {    
-        //initialize the stanrdard controller rrrr
+        //initialize the stanrdard controller CCC
         this.controller = controller;
         this.e = (Event)controller.getRecord();        
         Id eId= this.e.id;   
