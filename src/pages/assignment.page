@@ -1,6 +1,6 @@
 <apex:page standardController="Contact" extensions="ContactController">
     <apex:form >
-    	<!--  test -->
+    	<!--  test cc-->
         <apex:pageMessages />
         <apex:pageBlock title="Create New Contact">
             <apex:pageBlockSection >
