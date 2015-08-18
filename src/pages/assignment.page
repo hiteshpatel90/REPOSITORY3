@@ -1,0 +1,30 @@
+<apex:page standardController="Contact" extensions="ContactController">
+    <apex:form >
+    	<!--  test -->
+        <apex:pageMessages />
+        <apex:pageBlock title="Create New Contact">
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Contact.FirstName}"/>
+                <apex:inputField value="{!Contact.LastName}"/> 
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Country"/>
+                <apex:selectList value="{!country}" size="1">
+                    <apex:selectOptions value="{!countries}" />
+                    <apex:actionSupport event="onchange" reRender="state" />
+                </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel value="State"/>
+                <apex:selectList id="state" value="{!state}" size="1">
+                    <apex:selectOptions value="{!states}" />
+                </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+            	<apex:commandButton value="Save" action="{!doSave}"/>
+                <apex:commandButton action="{!doCancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>
