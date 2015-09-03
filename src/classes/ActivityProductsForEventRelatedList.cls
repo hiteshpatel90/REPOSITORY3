@@ -2,7 +2,7 @@ public with sharing class ActivityProductsForEventRelatedList{
     public Event e{get; set;}    
     public List<Activity_Products__c> APList{get; set;}
     public List<Products__c> ProductsCompleteList {get; set;}    
-    //added an instance varaible for the standard controller
+    //123 added an instance varaible for the standard controller 12345
     private ApexPages.StandardController controller {get; set;}
     public ActivityProductsForEventRelatedList(ApexPages.StandardController controller) {    
         //initialize the stanrdard controller CCC
